@@ -5,6 +5,9 @@ import css from './App.module.css'
 
 import HomePage from './pages/HomePage'
 import MoviesPage from './pages/MoviesPage'
+import MovieDetalsPage from './pages/MovieDetailsPage'
+import MovieReviews from './MovieReviews '
+import MovieCast from './MovieCast'
 
 // API Key
 // ce1bdf60c90c5aff209d38216d693f24
@@ -24,6 +27,10 @@ function App() {
     <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/movies/:movieId" element={<MovieDetalsPage />} >
+          <Route path="cast" element={<MovieCast/>}/>
+          <Route path="reviews" element={<MovieReviews/>}/>
+        </Route>
       </Routes>
     </main>
     
