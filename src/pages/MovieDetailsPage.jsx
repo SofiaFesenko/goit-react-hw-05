@@ -27,7 +27,7 @@ function MovieDetailsPage() {
 
     return (
       <>
-        <h1>MoviesPage {movieId}</h1> 
+        <Link to="/">go back</Link>
         <div className={css.block}>
             <img src={moviePicture} alt="raewfar" />  
             <div>

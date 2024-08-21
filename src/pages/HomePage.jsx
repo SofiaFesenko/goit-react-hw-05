@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import MovieList from "../MovieList";
 
 
 function HomePage() {
@@ -20,17 +20,7 @@ function HomePage() {
     return (
       <>
         <h1>Trending today</h1>
-        {Array.isArray(movies) && movies.length > 0 && (
-        <ul>
-          { movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>
-                {movie.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+        <MovieList movie={movies}/>
       </>
     )
 }
