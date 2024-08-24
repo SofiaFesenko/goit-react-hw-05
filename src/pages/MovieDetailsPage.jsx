@@ -1,12 +1,15 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link, Outlet, useParams } from "react-router-dom"
+import { useEffect, useRef, useState } from "react";
+import { Link, Outlet, useLocation, useParams } from "react-router-dom"
 
 import css from './MovieDetailsPage.module.css'
 
 function MovieDetailsPage() {
     const { movieId } = useParams()
     const [movie, setMovie] = useState(null);
+    const location = useLocation()
+
+    const locationRef = useRef(location.state?.from ?? "/movies")
 
     useEffect(() => {
         async function fetchSingleMovie() {
@@ -27,7 +30,7 @@ function MovieDetailsPage() {
 
     return (
       <>
-        <Link to="/">go back</Link>
+        <Link to={locationRef.current}>go back</Link>
         <div className={css.block}>
             <img src={moviePicture} alt="raewfar" />  
             <div>

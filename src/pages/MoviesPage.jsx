@@ -9,9 +9,7 @@ function MoviesPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const query = searchParams.get("query")
   const location = useLocation()
-
-  console.log(location);
-  
+ 
 
   function getinput(e) {
     e.preventDefault()
@@ -29,9 +27,7 @@ function MoviesPage() {
           const response = await axios.get(
               `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=ce1bdf60c90c5aff209d38216d693f24`
           );
-          setMovie(response.data.results)
-          console.log(response.data.results);
-          
+          setMovie(response.data.results)        
       }
 
       fetchSingleMovie();

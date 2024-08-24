@@ -1,9 +1,6 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function MovieList({movie, location}) {
-  const loccation = useLocation()
-  console.log(loccation);
-  
       return (
         <> 
           {Array.isArray(movie) && movie.length > 0 && (
