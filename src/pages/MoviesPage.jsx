@@ -1,7 +1,8 @@
-import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-import MovieList from "../MovieList";
 import { useLocation, useSearchParams } from "react-router-dom";
+import axios from "axios";
+
+import MovieList from "../MovieList";
 
 function MoviesPage() {
 
