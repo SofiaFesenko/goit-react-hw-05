@@ -11,9 +11,7 @@ function MoviesCast() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=ce1bdf60c90c5aff209d38216d693f24`
             );
-            setCast(response.data.cast)
-            console.log(response.data.cast);
-                      
+            setCast(response.data.cast)          
         }
 
         fetchSingleMovie();

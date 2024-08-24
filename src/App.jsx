@@ -7,8 +7,8 @@ import css from './App.module.css'
 const HomePage = lazy(() => import('./pages/HomePage'))
 const MoviesPage = lazy(() => import('./pages/MoviesPage'))
 const MovieDetalsPage = lazy(() => import('./pages/MovieDetailsPage'))
-const MovieReviews = lazy(() => import('./MovieReviews '))
-const MovieCast = lazy(() => import('./MovieCast'))
+const MovieReviews = lazy(() => import('./components/MovieReviews '))
+const MovieCast = lazy(() => import('./components/MovieCast'))
 
 function App() {
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import MovieList from "../MovieList";
+import MovieList from "../components/MovieList";
 
 
 function HomePage() {
@@ -15,7 +15,7 @@ function HomePage() {
         }
 
         fetchMovies();
-      }, []);
+      }, []);    
 
     return (
       <>

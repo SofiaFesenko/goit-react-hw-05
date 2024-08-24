@@ -13,8 +13,6 @@ function MoviesReviews() {
                 `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=ce1bdf60c90c5aff209d38216d693f24`
             );
             setReviews(response.data.results)
-            console.log(response.data.results);
-            
         }
 
         fetchSingleMovie();
