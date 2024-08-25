@@ -1,8 +1,7 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
-import { clsx } from 'clsx'
+import { Route, Routes } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 
-import css from './App.module.css'
+import Navigation from './components/Navigation'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const MoviesPage = lazy(() => import('./pages/MoviesPage'))
@@ -15,10 +14,7 @@ function App() {
 
   return (
     <>
-    <header className={css.linkblock}>
-      <NavLink to="/" className={({ isActive }) => clsx(css.link, isActive && css.active)}>Home</NavLink>
-      <NavLink to="/movies" className={({ isActive }) => clsx(css.link, isActive && css.active)} >Movies</NavLink>
-    </header>
+    <Navigation/>
     <main>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
